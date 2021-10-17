@@ -7,8 +7,8 @@ from src.Searcher import Searcher
 from src.Collector import Collector
 from src.Entry import Entry
 
-load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+# load_dotenv()
+# DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='$')
 # bot.remove_command('help')
@@ -64,4 +64,4 @@ async def sdoc(ctx, search_term: str):
     await ctx.send(embed=Embed(**embed_params))
 
 if __name__ == "__main__":
-    bot.run(DISCORD_TOKEN if DISCORD_TOKEN is not None else os.environ.get('DISCORD_TOKEN'))
+    bot.run(os.environ.get('DISCORD_TOKEN'))
