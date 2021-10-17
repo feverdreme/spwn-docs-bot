@@ -3,8 +3,7 @@ import os
 from src.Entry import Entry
 from dotenv import load_dotenv
 
-load_dotenv()
-DOCS_URL = os.getenv('DOCS_URL')
+DOCS_URL = "https://docs.spwn.it/"
 
 class Collector:
     def __init__(self):

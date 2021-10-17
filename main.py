@@ -64,4 +64,4 @@ async def sdoc(ctx, search_term: str):
     await ctx.send(embed=Embed(**embed_params))
 
 if __name__ == "__main__":
-    bot.run(DISCORD_TOKEN)
+    bot.run(DISCORD_TOKEN if DISCORD_TOKEN is not None else os.environ.get('DISCORD_TOKEN'))
